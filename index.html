@@ -15,9 +15,9 @@
     </head>
 
     <body>
-        <section class = "header">
+        <header class = "header">
             <nav>
-                <a href="index.html"><img src="images/logo.jpg"></a>
+                <!-- <a href="index.html"><img src="images/logo.jpg"></a> -->
                 <div class="nav-links" id="navLinks">
                     <i class="fas fa-times" onclick="hideMenu()"></i>
                     <ul>
@@ -36,7 +36,7 @@
                 <p>Software engineer</p>
                 <a class="hero-btn" href="">Contact me</a>
             </div>
-        </section>   
+        </header>   
 
         <!-- ----------About me---------- -->
         <section class="aboutme">
@@ -114,18 +114,18 @@
             window.onscroll = function() {
                 var currentScrollPos = window.pageYOffset;
 
-                // if (prevScrollPos < currentScrollPos) {
-                //     document.getElementById("navLinks").style.display = "none";
-                //     prevScrollPos = currentScrollPos;
-                // } else {
-                //     document.getElementById("navLinks").style.display = "block";
-                //     prevScrollPos = currentScrollPos + 10;
-                // }
+                if (prevScrollPos < currentScrollPos) {
+                    document.getElementById("navLinks").style.display = "none";
+                    prevScrollPos = currentScrollPos;
+                } else {
+                    document.getElementById("navLinks").style.display = "block";
+                    prevScrollPos = currentScrollPos + 10;
+                }
 
                 var navlinkels = document.getElementsByName("navlink")
 
                 var linkcolor = "#fff"
-                if (currentScrollPos > 1080)
+                if (currentScrollPos > 800)
                 {
                     linkcolor = "#000000";
                 }
