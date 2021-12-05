@@ -18,6 +18,8 @@ nav{
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    /* text-align: right;
+    position: relative; */
 }
 
 nav img{
@@ -27,6 +29,8 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
+    /* display: block;
+    position: fixed; */
 }
 
 .nav-links ul li{
@@ -86,9 +90,30 @@ nav img{
     background: transparent;
     position: relative;
     cursor:pointer;
+    border-radius: 10px;
     }
 
 .hero-btn:hover{
+    border: 1px solid #ff0405b3;
+    background: #ff0405b3;
+    transition: 1s;
+}
+
+.hero-btn-whitebg{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0,0,0,0.7);
+    padding: 14px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+    border-radius: 10px;
+    }
+
+.hero-btn-whitebg:hover{
+    color: #fff;
     border: 1px solid #ff0405b3;
     background: #ff0405b3;
     transition: 1s;
@@ -117,6 +142,7 @@ nav .fas{
         text-align: left;
         z-index: 2;
         transition: 1s;
+        /* display: block; */
     }
 
     nav .fas{
@@ -130,4 +156,127 @@ nav .fas{
     .nav-links ul{
         padding: 30px;
     }
+}
+
+/* ----------About me---------- */
+.aboutme{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+/* ----------Projects---------- */
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-col{
+    flex-basis: 31%;
+    background:#fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.portfolio-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/* ----------experience---------- */
+.experience{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.resume-pdf{
+    width: 80%;
+    align-items: center;
+    /* min-width: 600px;
+    max-width: 900px; */
+    height: 1000px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media(max-width:700px){
+    .resume-pdf{
+        display: none;
+    }
+}
+/* ----------footer---------- */
+.footer{
+    /* width: 80%; */
+    padding-top: 30px;
+}
+.copyright{
+    text-align: center;
+    color: #0000004d;
+    font-size: 14px;
+}
+.media-links{
+    flex: 1;
+    text-align: right;
+}
+
+.media-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+.media-links ul li a{
+    color: #ff0405b3;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
 }

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <title>Tine Lazar - Software Engineering Portfolio.</title>
+        <meta name="keywords" content="Tine, Tine Lazar,  Tine Lazar Portfolio,">
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
-        <title>Tine's portfolio</title>
+        <meta name="author" content="[Tine Lazar]">
+        <meta property="og:type" content="[Portfolio]">
+        <meta name="description" property="og:description" content="Tine Lazar's Software Engineering Portfolio.">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +21,11 @@
                 <div class="nav-links" id="navLinks">
                     <i class="fas fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">PORTFOLIO</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a name="navlink" href="">Home</a></li>
+                        <li><a name="navlink" href="">About</a></li>
+                        <li><a name="navlink" href="">Projects</a></li>
+                        <li><a name="navlink" href="">Resume</a></li>
+                        <li><a name="navlink" href="">Contact</a></li>
                     </ul>
                 </div>
                 <i class="fas fa-bars" onclick="showMenu()"></i>
@@ -32,19 +37,104 @@
                 <a class="hero-btn" href="">Contact me</a>
             </div>
         </section>   
-        
+
+        <!-- ----------About me---------- -->
+        <section class="aboutme">
+            <h1>About me</h1>
+            <p>Shortly about me</p>
+        </section>
+
+        <!-- ----------Projects---------- -->
+        <section class="projects">
+            <h1>My projects</h1>
+
+            <div class="row">
+                <div class="projects-col">
+                    <h3>APGK</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="projects-col">
+                    <h3>TimeKeeper</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="projects-col">
+                    <h3>Petra</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------resume---------- -->
+
+        <div class="experience">
+            <h1>Resume</h1>
+
+            <embed class="resume-pdf" src="assets/cv_tine_lazar.pdf" type="application/pdf">
+
+            <div class="resume">
+                <a href="assets/cv_tine_lazar.pdf" class="hero-btn-whitebg" target="_blank" class="btn">Download Resume</a>
+            </div>
+        </div>
+
+        <!-- ----------footer---------- -->        
+        <footer class="footer">
+            <nav>
+                <div class="copyright">Tine Lazar <i class="far fa-copyright"></i> 2021</div>
+                <div class="media-links">
+                    <ul>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/tine-lazar"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a target="_blank" href="mailto:tinelazar@gmail.com"><i class="far fa-envelope"></i></a></li>
+                        <li><a target="_blank" href="https://github.com/tinelazar"><i class="fab fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://stackoverflow.com/users/10530378/uma"><i class="icon-stackoverflow"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+
+        <!-- ----------Javascript for menu---------- -->
         <script>
+            // ----------Hide navbar when scrolling----------
             var navLinks = document.getElementById("navLinks");
 
             function showMenu()
             {
                 navLinks.style.right = "0";
+                // navLinks.style.display = "block"
             }
 
             function hideMenu()
             {
                 navLinks.style.right = "-200px"
+                // navLinks.style.display = "none"
             }
+
+            // ----------Change fon color based on background----------
+            var prevScrollPos = 0;
+
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+
+                // if (prevScrollPos < currentScrollPos) {
+                //     document.getElementById("navLinks").style.display = "none";
+                //     prevScrollPos = currentScrollPos;
+                // } else {
+                //     document.getElementById("navLinks").style.display = "block";
+                //     prevScrollPos = currentScrollPos + 10;
+                // }
+
+                var navlinkels = document.getElementsByName("navlink")
+
+                var linkcolor = "#fff"
+                if (currentScrollPos > 1080)
+                {
+                    linkcolor = "#000000";
+                }
+
+                for(var i = 0; i < navlinkels.length; i++) 
+                    {
+                        navlinkels[i].style.color = linkcolor;
+                    }
+            }                   
         </script>
     </body>
 </html>
