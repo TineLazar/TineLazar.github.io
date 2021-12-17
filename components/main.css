@@ -1,0 +1,148 @@
+.aboutme{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+/* ----------Projects---------- */
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-col{
+    flex-basis: 31%;
+    background:#fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    position: relative;
+    min-height: 500px;
+    cursor: pointer;
+    display: inline-block;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.portfolio-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.slideshow{
+    display: block;
+    min-height: 300px;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%,0);
+    overflow: hidden;
+}
+.img{
+    top: 50%;
+    transform: translate(0, 50%);
+}
+.tag{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clearfix
+{
+    clear: both;
+}
+.clearfix:after {
+    clear: both; 
+    content: "";
+    display: table; 
+  }
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/* ----------experience---------- */
+.experience{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.resume-pdf{
+    width: 80%;
+    align-items: center;
+    height: 1000px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hero-btn-whitebg{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0,0,0,0.7);
+    padding: 14px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+    border-radius: 10px;
+    }
+
+.hero-btn-whitebg:hover{
+    color: #fff;
+    border: 1px solid #ff0405b3;
+    background: #ff0405b3;
+    transition: 1s;
+}
+
+@media(max-width:700px){
+    .resume-pdf{
+        display: none;
+    }
+}

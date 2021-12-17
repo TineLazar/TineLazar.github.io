@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="[Tine Lazar]">
+    <link rel="stylesheet" href="/components/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/components/main.js"></script>
+</head>
+
+<body>
+    <!-- ----------About me---------- -->
+    <section class="aboutme" id="About">
+        <h1>About me</h1>
+        <p>I am a Software Engineer with Mechanical Engineering background.</p>
+    </section>
+
+    <!-- ----------Projects---------- -->
+    <section class="projects" id="Projects">
+        <h1>My projects</h1>
+
+        <div class="row">
+            <div class="projects-col">
+                    <h3>APGK</h3>
+                    <div id="apgk-slideshow"></div>
+                    <div class="tag">
+                        <p>My first program in C#. Application for automating daily workflows.</p>
+                            <hr>
+                        <p>Tags: C#, .Net, MySQL, WindowsForms</p>
+                    </div>
+            </div>
+
+            <div class="projects-col">
+                    <h3>TimeKeeper</h3>
+                    <div class="img">
+                        <img src="/components/images/TK.png" height="100%" width="100%">
+                    </div>
+                    <div class="tag">
+                        <p>Minimalistic application to monitor time used on projects.</p>
+                        <hr>
+                        <p>Tags: C#, .Net, MySQL, MVVM</p>
+                    </div>
+            </div>
+
+            <div class="projects-col" id = "petra_click">
+                    <h3>Petra</h3>
+                    <div id="petra-slideshow"></div>
+                    <div class="tag">
+                        <p>Application for managing a department.</p>
+                    <hr>
+                    <p>Tags: C#, .Net, MySQL, MVVM</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------resume---------- -->
+
+    <div class="experience" id="Resume">
+        <h1>Resume</h1>
+
+        <embed class="resume-pdf" src="/components/assets/cv_tine_lazar.pdf" type="application/pdf">
+
+        <div class="resume" id="download_resume">
+            <a href="/components/assets/cv_tine_lazar.pdf" class="hero-btn-whitebg" target="_blank" class="btn">Download Resume</a>
+        </div>
+    </div>
+</body>

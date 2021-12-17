@@ -1,0 +1,5 @@
+"scripts": {
+    "build:app": "browserify -e ./app/index.js -o ./dist/app.js",
+    "copy:jquery": "cpy 'node_modules/jquery/dist/jquery.min.js' ./dist/scripts/",
+    …
+  }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project: Petra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/components/slideshow.css">
+    <meta name="keywords" content="Tine, Tine Lazar,  Tine Lazar Portfolio,">
+    <meta name="author" content="[Tine Lazar]">
+    <meta property="og:type" content="[Portfolio]">
+    <meta name="description" property="og:description" content="Tine Lazar's Software Engineering Portfolio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  </head>
+
+  <body>
+    <div class = "container">
+      <div class="slideshow-container">
+
+        <div class="mySlides-petra fade">
+          <!-- <div class="numbertext">1 / 4</div> -->
+          <img src="/components/images/Petra_01.png" class="slideshow_img" onmouseover="StopSlideshow()" onmouseout="RestartSlideShow()">
+          <!-- <div class="text">Project overview</div> -->
+        </div>
+      
+        <div class="mySlides-petra fade">
+          <!-- <div class="numbertext">2 / 4</div> -->
+          <img src="/components/images/Petra_02.png" class="slideshow_img" onmouseover="StopSlideshow()" onmouseout="RestartSlideShow()">
+          <!-- <div class="text">Employee day tracking</div> -->
+        </div>
+      
+        <div class="mySlides-petra fade">
+          <!-- <div class="numbertext">3 / 4</div> -->
+          <img src="/components/images/Petra_03.png" class="slideshow_img" onmouseover="StopSlideshow()" onmouseout="RestartSlideShow()">
+          <!-- <div class="text">Tasks</div> -->
+        </div>
+
+        <div class="mySlides-petra fade">
+          <!-- <div class="numbertext">4 / 4</div> -->
+          <img src="/components/images/Petra_04.png" class="slideshow_img" onmouseover="StopSlideshow()" onmouseout="RestartSlideShow()">
+          <!-- <div class="text">Project planning</div> -->
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <script>
+      var timeout = null;
+var slideIndex= 0;
+showSlides(null);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var slides = document.getElementsByClassName("mySlides-petra");
+var dots = document.getElementsByClassName("dot");
+
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+
+if(n !=null)
+{
+    clearTimeout(timeout)
+    slideIndex = n
+}
+else{
+    slideIndex++;
+}
+
+if (slideIndex > slides.length) {slideIndex = 1}
+
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+timeout = setTimeout(showSlides, 5000);
+}
+
+function StopSlideshow()
+{
+clearTimeout(timeout);
+}
+
+function RestartSlideShow()
+{
+showSlides(null);
+}
+    </script>
+  </body>
+</html>

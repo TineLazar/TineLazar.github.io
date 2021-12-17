@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Tine Lazar - Software Engineering Portfolio.</title>
+        <meta name="keywords" content="Tine, Tine Lazar,  Tine Lazar Portfolio,">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <meta name="author" content="[Tine Lazar]">
+        <meta property="og:type" content="[Portfolio]">
+        <meta name="description" property="og:description" content="Tine Lazar's Software Engineering Portfolio.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    </head>
+
+    <body>
+        <header class = "header" id="header">
+            <nav>
+                <!-- <a href="index.html"><img src="images/logo.jpg"></a> -->
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a name="navlink" onclick="GoToContact()">Contact</a></li>
+                        <li><a name="navlink" onclick="GoToResume()">Resume</a></li>
+                        <li><a name="navlink" onclick="GoToProjects()">Projects</a></li>
+                        <li><a name="navlink" onclick="GoToAbout()">About</a></li>
+                        <li><a name="navlink" href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <i class="fas fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <h1>Tine Lazar</h1>
+                <p>Software engineer</p>
+                <a class="hero-btn" href="mailto:tinelazar@gmail.com">Contact me</a>
+            </div>
+        </header>   
+
+        <!-- ----------content---------- -->
+        <div class="main_content">
+            <!-- <iframe class="content" src="components/main.html"></iframe> -->
+            </div>
+        </div>
+
+        <!-- ----------footer---------- -->        
+        <footer class="footer" id="Contact">
+            <nav>
+                <div class="copyright">Tine Lazar <i class="far fa-copyright"></i> 2021</div>
+                <div class="media-links">
+                    <ul>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/tine-lazar"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a target="_blank" href="mailto:tinelazar@gmail.com"><i class="far fa-envelope"></i></a></li>
+                        <li><a target="_blank" href="https://github.com/tinelazar"><i class="fab fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://stackoverflow.com/users/10530378/uma"><i class="icon-stackoverflow"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+
+        <!-- ----------Javascript for menu---------- -->
+        <script>
+            // ----------Hide navbar when scrolling----------
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu()
+            {
+                navLinks.style.right = "0";
+                // navLinks.style.display = "block"
+            }
+
+            function hideMenu()
+            {
+                navLinks.style.right = "-200px"
+                // navLinks.style.display = "none"
+            }
+
+            // ---------- navigate the page----------
+            function GoToAbout()
+            {
+                document.getElementById('About').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function GoToProjects()
+            {
+                document.getElementById('Projects').scrollIntoView({behavior:"smooth"});
+            }
+
+            function GoToResume()
+            {
+                document.getElementById('Resume').scrollIntoView({behavior:"smooth"});
+            }
+
+            function GoToContact()
+            {
+                document.getElementById('Contact').scrollIntoView({behavior:"smooth"});
+            }
+            
+            // ----------Change fon color based on location ----------
+            var prevScrollPos = 0;
+
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+
+                if (prevScrollPos < currentScrollPos && document.getElementById("header").clientWidth > 700) {
+                    document.getElementById("navLinks").style.display = "none";
+                    prevScrollPos = currentScrollPos;
+                } else {
+                    document.getElementById("navLinks").style.display = "block";
+                    prevScrollPos = currentScrollPos + 10;
+                }
+
+                var navlinkels = document.getElementsByName("navlink")
+
+                var linkcolor = "#fff"
+                if (currentScrollPos >= 0.97*document.getElementById("header").clientHeight)
+                {
+                    linkcolor = "#000000";
+                }
+
+                for(var i = 0; i < navlinkels.length; i++) 
+                    {
+                        navlinkels[i].style.color = linkcolor;
+                    }
+            }                   
+        </script>
+    </body>
+</html>
