@@ -3,11 +3,6 @@ $(document).ready(function () {
     $("#Footer").load("./components/footer.html"); 
 });
 
-// var end = $("#BottomThing").offset().top; var
-// viewEnd = $(window).scrollTop() + $(window).height();
-// var distance = end - viewEnd;
-// if (distance < 300)    // do load
-
 $(window).scroll(function() {
     if($(window).scrollTop() == $(document).height() - $(window).height()) {
         $('#content').load('./components/main.html');
@@ -51,10 +46,20 @@ $(window).scroll(function() {
 
  function GoToContact()
  {  
-    $('#content').load('/components/main.html', function() {
-        document.getElementById('Contact').scrollIntoView({behavior:"smooth"});
-        window.scrollTo(0,document.body.scrollHeight);
-    }); 
+     var resume = document.getElementById('Resume');
+     var contact = document.getElementById('Contact');
+
+     if(!resume)
+     {
+        $('#content').load('/components/main.html', function() {
+            contact = document.getElementById('Contact');
+            contact.scrollIntoView({behavior:"smooth"});
+        })
+     }
+     else{
+        contact.scrollIntoView({behavior:"smooth"});
+     }
+    //  window.scrollTo(0,document.body.scrollHeight);
  }
  
  // ----------Change fon color based on location ----------

@@ -7,4 +7,16 @@ $(document).ready(function () {
         div.removeChild(div.firstChild);
         $("#petra").load("/components/petra.html"); 
             });
+
+    document.getElementById('apgk_click').addEventListener('click', function (event) {
+        var div = document.getElementById('contentdiv');
+        div.removeChild(div.firstChild);
+        $("#petra").load("/components/apgk.html"); 
+            });
+
+    document.getElementById('tk_click').addEventListener('click', function (event) {
+        var div = document.getElementById('contentdiv');
+        div.removeChild(div.firstChild);
+        $("#petra").load("/components/timekeeper.html"); 
+            });
 });

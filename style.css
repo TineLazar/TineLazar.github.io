@@ -29,6 +29,10 @@ nav{
     position: fixed;
 }
 
+.nav-links ul{
+    direction: ltr;
+}
+
 .nav-links ul li{
     list-style: none;
     display: inline-block;

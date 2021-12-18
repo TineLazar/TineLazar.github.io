@@ -20,7 +20,7 @@ h1{
     height: auto;
 }
 .slideshow{
-    display: table-row;
+    display: block;
     width: 100%;
 }
 .clearfix
@@ -31,4 +31,21 @@ h1{
     clear: both; 
     content: "";
     display: table; 
+  }
+
+.img{
+    margin:auto;
+    max-width: max-content;
+    max-height: max-content;
+}
+ul.tags{
+    list-style: none;
+    text-align: center;
+}
+ul.tags > li {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
   }

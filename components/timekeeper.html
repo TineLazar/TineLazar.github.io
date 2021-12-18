@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project: Petra</title>
+        <title>Project: TimeKeeper</title>
         <meta name="author" content="[Tine Lazar]">
         <meta name="description" property="og:description" content="Program for managing a department.  ">
         <link rel="stylesheet" href="/components/projects.css">
@@ -11,20 +11,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $("#slideshow").load("/components/petra_slideshow.html"); 
-            });
-        </script>
     </head>
     <body>
         <div class="content clearfix">
-            <h1>Project: Petra</h1>
-            <p>Program for managing a department.</p>
+            <h1>Project: TimeKeeper</h1>
+            <p>Program for monitoring engineering hours spent on projects.</p>
             <br>
-            <div id="slideshow"></div>
+            <div class="img">
+                <img src="/components/images/TK.png" height="80%" width="80%">
+            </div>
             <br>
-            <p>Program for running a department. Includes predicting workload, planning, monitoring and dividing tasks between employees.</p>
+            <p>Minimalistic program that utilizes the power of Windows events (lock, unlock, log on, log off, inactivity...) to record hours spent on projects. Most of the time it stays hidden in the taskbar but wakes up and alerts the user on predefined intervals.</p>
             <br>
             <ul class ="tags">
                 <li>C#</li>
