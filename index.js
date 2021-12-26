@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#header').load('./components/header.html', function()
     {
-        if(!document.URL.includes("index"))
+        if(['apgk','petra','timekeeper'].includes(document.URL))
         {
             HideElementsByName("maincontent");
         };
