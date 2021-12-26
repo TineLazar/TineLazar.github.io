@@ -4,6 +4,8 @@
     font-family: 'Palanquin Dark', sans-serif;
 }
 .content{
+    width: 80%;
+    margin: auto;
     padding: 0 30px 30px 30px;
     display: flex;
     flex-direction: column;
@@ -19,7 +21,8 @@ h1{
     display: table;
     height: auto;
 }
-.slideshow{
+#slideshow{
+    position: relative;
     display: block;
     width: 100%;
 }

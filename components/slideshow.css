@@ -2,7 +2,6 @@
   font-family: 'Palanquin Dark', sans-serif;}
 
 .container{
-  /* max-height: 100vh; */
   display: block;
   flex-flow: column;
   align-items: center;
@@ -12,7 +11,6 @@
 .slideshow-container {
   align-self: normal;
   display: block;
-  /* max-height: 80%; */
 }
 
 /* Hide the images by default */
@@ -92,9 +90,9 @@
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+/* .active, .dot:hover {
   background-color: #717171;
-}
+} */
 
 /* Fading animation */
 .fade {

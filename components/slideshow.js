@@ -1,51 +1,71 @@
-var timeout = null;
-var slideIndex= 0;
-showSlides(null);
+function Slideshow(){
+    this.slideindex = 0;
+    this.timer = null;
+    this.slides = null;
+    this.dots = null;
 
-// Next/previous controls
-function plusSlides(n) {
-showSlides(slideIndex += n);
-}
+    this.showslide = function(n){
 
-// Thumbnail image controls
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
+        for (i = 0; i < this.slides.length; i++) {
+            this.slides[i].style.display = "none";
+        }
 
-function showSlides(n) {
-var slides = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < this.dots.length; i++) {
+            this.dots[i].style.backgroundColor = "#bbb";
+        }
 
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
+        if(n !=null)
+        {
+            this.slideindex = n;
+        }
+        else{
+            this.slideindex++;
+        }
 
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
+        if (this.slideindex >= this.slides.length) {this.slideindex = 0}
 
-if(n !=null)
-{
-    clearTimeout(timeout)
-    slideIndex = n
-}
-else{
-    slideIndex++;
-}
+        this.slides[this.slideindex].style.display = "block";
+        this.dots[this.slideindex].style.backgroundColor = "#717171";
+    }
 
-if (slideIndex > slides.length) {slideIndex = 1}
+    this.showthisslide = function(n)
+    {
+        this.stopslideshow();
+        this.slideindex = n;
+        this.showslide(n);
+    }
 
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-timeout = setTimeout(showSlides, 5000);
-}
+    this.findelements = function(slides, dots)
+    {
+        this.slides = document.getElementsByClassName(slides);
+        this.dots = document.getElementsByClassName(dots);
+    }
 
-function StopSlideshow()
-{
-clearTimeout(timeout);
-}
+    this.stopslideshow = function(){
+        if(this.timer != null)
+        {
+            clearInterval(this.timer);
+        }
+    }
 
-function RestartSlideShow()
-{
-showSlides(null);
+    this.startslideshow = function(n)
+    {
+        this.timer = setInterval(() => {
+            this.showslide(n);
+        }, 5000);
+    }
+
+    this.changeslide = function(n)
+    {
+        this.stopslideshow();
+        this.slideindex += n;
+        this.showslide(this.slideindex);
+    }
+
+    this.init = function(slides, dots){
+        this.findelements(slides, dots);
+        this.slides[0].style.display = "block";
+        this.dots[0].style.backgroundColor = "#717171";
+        this.startslideshow(null);
+    }
 }

@@ -2,36 +2,49 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project: APGK</title>
+        <title>Project: Petra</title>
         <meta name="author" content="[Tine Lazar]">
         <meta name="description" property="og:description" content="Program for managing a department.  ">
         <link rel="stylesheet" href="/components/projects.css">
+        <link rel="stylesheet" href="/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
         <script>
             $(document).ready(function () {
-                $("#slideshow").load("/components/apgk_slideshow.html"); 
+                $("#slideshow").load("/components/petra_slideshow.html", function()
+                {
+                    document.getElementById("slideshow").scrollIntoView({ behavior: 'smooth' });
+                }); 
             });
         </script>
     </head>
     <body>
+        <!-- ----------header---------- -->
+        <header id="header"></header>         
+
+        <!-- ----------content---------- -->
         <div class="content clearfix">
-            <h1>Project: APGK</h1>
-            <p>Program for automating workflows of mechanical engineers.</p>
+            <h1>Project: Petra</h1>
+            <p>Program for managing a department.</p>
             <br>
             <div id="slideshow"></div>
             <br>
-            <p>Program for automation. Alleviates access to numerous files, automates workflows and notifications between departments.</p>
+            <p>Program for running a department. Includes predicting workload, planning, monitoring and dividing tasks between employees.</p>
             <br>
             <ul class ="tags">
                 <li>C#</li>
                 <li>.Net</li>
                 <li>MySQL</li>
-                <li>WindowsForms</li>
+                <li>WPF</li>
+                <li>MVVM</li>
             </ul>
-            </div>
+        </div>
+
+        <!-- ----------footer---------- -->        
+        <footer id="Footer"></footer>  
     </body>
 </html>

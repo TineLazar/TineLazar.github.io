@@ -6,18 +6,29 @@
         <meta name="author" content="[Tine Lazar]">
         <meta name="description" property="og:description" content="Program for managing a department.  ">
         <link rel="stylesheet" href="/components/projects.css">
+        <link rel="stylesheet" href="/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <script>
+            $(document).ready(function () {
+                document.getElementById("img").scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
     </head>
     <body>
+        <!-- ----------header---------- -->
+        <header id="header"></header>         
+
+        <!-- ----------content---------- -->
         <div class="content clearfix">
             <h1>Project: TimeKeeper</h1>
             <p>Program for monitoring engineering hours spent on projects.</p>
             <br>
-            <div class="img">
+            <div class="img" id="img">
                 <img src="/components/images/TK.png" height="80%" width="80%">
             </div>
             <br>
@@ -30,6 +41,9 @@
                 <li>WPF</li>
                 <li>MVVM</li>
             </ul>
-            </div>
+        </div>
+
+        <!-- ----------footer---------- -->        
+        <footer id="Footer"></footer>  
     </body>
 </html>

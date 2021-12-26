@@ -1,5 +1,11 @@
 $(document).ready(function () {
-    $('#header').load('./components/header.html');
+    $('#header').load('./components/header.html', function()
+    {
+        if(!document.URL.includes("index"))
+        {
+            HideElementsByName("maincontent");
+        };
+    });
     $("#Footer").load("./components/footer.html"); 
 });
 
@@ -32,16 +38,30 @@ $(window).scroll(function() {
 
  function GoToProjects()
  {
-    $('#content').load('./components/main.html', function() {
-     document.getElementById('Projects').scrollIntoView({behavior:"smooth"});
-    });   
+    try
+    {
+        document.getElementById('Projects').scrollIntoView({behavior:"smooth"});
+    }
+    catch(ex)
+    {
+        $('#content').load('./components/main.html', function() {
+            document.getElementById('Projects').scrollIntoView({behavior:"smooth"});
+        }); 
+    }
  }
 
  function GoToResume()
  {
-    $('#content').load('./components/main.html', function() {
-     document.getElementById('Resume').scrollIntoView({behavior:"smooth"});
-    });   
+    try
+    {
+        document.getElementById('Resume').scrollIntoView({behavior:"smooth"});
+    }
+    catch(ex)
+    {
+        $('#content').load('./components/main.html', function() {
+            document.getElementById('Resume').scrollIntoView({behavior:"smooth"});
+        });   
+    }
  }
 
  function GoToContact()
@@ -49,17 +69,17 @@ $(window).scroll(function() {
      var resume = document.getElementById('Resume');
      var contact = document.getElementById('Contact');
 
-     if(!resume)
-     {
-        $('#content').load('/components/main.html', function() {
-            contact = document.getElementById('Contact');
-            contact.scrollIntoView({behavior:"smooth"});
-        })
-     }
-     else{
-        contact.scrollIntoView({behavior:"smooth"});
-     }
-    //  window.scrollTo(0,document.body.scrollHeight);
+    if(document.URL.includes("index"))
+    {
+        if(!resume)
+        {
+            $('#content').load('/components/main.html', function() {
+                contact.scrollIntoView({behavior:"smooth"});
+            })
+        }
+    }
+
+    contact.scrollIntoView({behavior:"smooth"});     
  }
  
  // ----------Change fon color based on location ----------
@@ -80,4 +100,12 @@ $(window).scroll(function() {
          {
              navlinkels[i].style.color = linkcolor;
          }
- }           
+ }
+
+ function HideElementsByName(name)
+ {
+    let el = document.getElementsByName(name);
+    for (i = 0; i < el.length; i++) {
+        el[i].style.display = "none";   
+    }
+ }
