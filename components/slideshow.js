@@ -27,6 +27,7 @@ catch(e) {
             }
 
             if (this.slideindex >= this.slides.length) {this.slideindex = 0}
+            if (this.slideindex < 0) {this.slideindex = this.slides.length-1}
 
             this.slides[this.slideindex].style.display = "block";
             this.dots[this.slideindex].style.backgroundColor = "#717171";

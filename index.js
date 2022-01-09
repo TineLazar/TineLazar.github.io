@@ -4,15 +4,17 @@ try{
 catch(e) 
 {
         $(document).ready(function () {
-        $('#header').load('./components/header.html', function()
-        {
-            if(['apgk','petra','timekeeper'].includes(document.URL))
+            $('#header').load('./components/header.html', function()
             {
-                HideElementsByName("maincontent");
-            };
+                if(['apgk','petra','timekeeper'].some(v => document.URL.includes(v)))
+                {
+                    HideElementsByName("maincontent");
+                };
+            });
+            
+            $("#Footer").load("./components/footer.html"); 
+
         });
-        $("#Footer").load("./components/footer.html"); 
-    });
 
     $(window).scroll(function() {
         if($(window).scrollTop() == $(document).height() - $(window).height()) {
