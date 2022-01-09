@@ -1,5 +1,5 @@
 try{
-    isComponentResourcesAlreadyIncluded; //this variable is flag of whether resources already loaded or not.
+    isComponentResourcesAlreadyIncluded;
 }
 catch(e) {
     function Slideshow(){

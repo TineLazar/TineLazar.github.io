@@ -13,7 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <script type="text/javascript" src="/components/slideshow.js"></script>
-    <script>let slideshowapgk = new Slideshow();</script>
+    <script>
+      if (typeof slideshowapgk !== 'undefined') {
+        let slideshowapgk = new Slideshow();
+      }
+    </script>
   </head>
 
   <body>
