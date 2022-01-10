@@ -8,7 +8,7 @@
 header{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(components/images/background.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(components/images/background.jpg);
     background-position: center;
     background-size: cover;
     position:-webkit-sticky;
@@ -111,7 +111,7 @@ nav .fas{
 }
 
 .text-box h1 {
-    font-size: 62px;
+    font-size: 70px;
 }
 
 .text-box p {
@@ -152,6 +152,11 @@ nav .fas{
 h1{
     font-size: 36px;
     font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 25px;
 }
 p{
     color: #777;
@@ -167,18 +172,6 @@ p{
     margin: auto;
     text-align: center;
     padding-top: 50px;
-}
-
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
 }
 .row{
     margin: 5%;

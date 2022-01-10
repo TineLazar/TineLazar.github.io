@@ -15,7 +15,21 @@
     <!-- ----------About me---------- -->
     <section class="aboutme" id="About">
         <h1>About me</h1>
-        <p>I am a Software Engineer with Mechanical Engineering background.</p>
+        <div class="row">
+            <div class="aboutme-col1">
+                <img id= "me" src="/components/images/me.jpg"/>
+            </div>
+            <div class="aboutme-col2">
+                <p>I am a Software Engineer with Mechanical Engineering background, based in 
+                    Loulé, Portugal. I am honest, communicative, hardworking and always up for 
+                    a challenge. I am self-thought, motivated and I always give my best.</p>
+        
+                <p>I spend my free time relaxing on the beach, swimming, reading a good book, 
+                walking my dog Nico, riding motorbike and running. For a home project, I am 
+                developing and constantly improving a trading bot for stocks and 
+                cryptocurrencies.</p>
+            </div>
+        </div>
     </section>
 
     <!-- ----------Projects---------- -->
@@ -26,21 +40,28 @@
             <div class="projects-col">
                     <h3 name = "apgk_click">APGK</h3>
                     <div id="apgk-slideshow"></div>
-                    <p name="apgk_click">My first program in C#. Application for automating daily workflows.</p>
+                    <div id="description">
+                        <p name="apgk_click">My first program in C#. Application for automating daily workflows.</p>
+                    </div>
+                    
             </div>
 
             <div class="projects-col" id = "tk_click">
                     <h3>TimeKeeper</h3>
-                    <div class="img">
+                    <div id="img">
                         <img src="/components/images/TK.png" height="100%" width="100%">
-                        <p id="desc">Minimalistic application to monitor time used on projects.</p>
+                    </div>
+                    <div id="description">
+                        <p >Minimalistic application to monitor time used on projects.</p>
                     </div>
             </div>
 
             <div class="projects-col">
                     <h3 name = "petra_click">Petra</h3>
                     <div id="petra-slideshow"></div>
-                    <p name="petra_click">Application for managing a department.</p>
+                    <div id="description">
+                        <p name="petra_click">Application for managing a department.</p>
+                    </div>
             </div>
         </div>
     </section>

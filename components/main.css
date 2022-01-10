@@ -16,6 +16,37 @@ p{
     line-height: 22px;
     padding: 10px;
 }
+
+#me{
+    height: 100%;
+    width: 100%;
+}
+
+.aboutme-col1{
+    flex-basis: 32%;
+    /* background:#fff3f3;
+    border-radius: 10px; 
+    padding: 20px 12px;*/
+    box-sizing: border-box;
+    transition: 0.5s;
+    position: relative;
+    display: inline-block;
+}
+#me{
+    border-radius: 50%;
+}
+.aboutme-col2{
+    flex-basis: 64%;
+    /* background:#fff3f3;
+    border-radius: 10px; 
+    padding: 20px 12px;*/
+    margin: auto;
+    box-sizing: border-box;
+    transition: 0.5s;
+    position: relative;
+    display: inline-block;;
+    text-align: left;
+}
 /* ----------Projects---------- */
 .projects{
     width: 80%;
@@ -71,9 +102,15 @@ h3{
     transform: translate(-50%,0);
     overflow: hidden;
 }
-.img{
+
+#img{
     top: 50%;
-    transform: translate(0, 50%);
+    transform: translate(0, 30%);
+    margin-bottom: 50px;
+}
+
+#description{
+    margin-top: 10px;
 }
 
 .clearfix

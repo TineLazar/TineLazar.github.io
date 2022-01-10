@@ -16,9 +16,12 @@ catch(e)
 
         });
 
+    let loaded = false;
     $(window).scroll(function() {
-        if($(window).scrollTop() == $(document).height() - $(window).height()) {
+        if($(window).scrollTop() == $(document).height() - $(window).height()
+        && !loaded) {
             $('#content').load('./components/main.html');
+            loaded = true;
         }
     });
     
