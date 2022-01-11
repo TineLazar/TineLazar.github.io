@@ -33,7 +33,10 @@ p{
     display: inline-block;
 }
 #me{
-    border-radius: 50%;
+    border-radius: 10px;
+}
+h4{
+    font-size: 18px;
 }
 .aboutme-col2{
     flex-basis: 64%;
